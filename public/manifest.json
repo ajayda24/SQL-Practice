@@ -1,5 +1,5 @@
 {
-  "name": "SQL Practice PWA",
+  "name": "SQL Practice",
   "short_name": "SQL Practice",
   "description": "Practice SQL queries offline on your mobile device",
   "start_url": "/",
@@ -10,25 +10,25 @@
   "categories": ["education", "productivity"],
   "icons": [
     {
-      "src": "/icon-192x192.png",
+      "src": "/sql-server-1.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "/sql-server-1.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/icon-192x192.png",
+      "src": "/sql-server-1.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "/sql-server-1.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
