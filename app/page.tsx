@@ -11,6 +11,7 @@ import { toast } from 'sonner';
 import { DatabaseStorage } from '@/lib/storage';
 import { Database as DatabaseType } from '@/lib/sqlDb';
 import Link from 'next/link';
+import LikeButton from '@/components/LikeButton';
 
 export default function Home() {
   const [databases, setDatabases] = useState<DatabaseType[]>([]);
@@ -135,6 +136,9 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200">
       <div className="container mx-auto px-4 py-6 max-w-4xl">
         {/* Header */}
+        <div className="w-full flex justify-end">
+          <LikeButton />
+        </div>
         <div className="text-center mb-8">
           <div className="flex justify-center items-center mb-4">
             <div className="bg-blue-600 p-3 rounded-2xl shadow-lg">
@@ -270,7 +274,7 @@ export default function Home() {
                     Modified: {formatDate(db.lastModified)}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className='pt-6'>
+                <CardContent className="pt-6">
                   <div className="flex gap-4 justify-between">
                     <Button asChild className="flex-1">
                       <Link href={`/editor?db=${db.id}`}>Open Editor</Link>
@@ -322,10 +326,15 @@ export default function Home() {
         )}
 
         {/* Footer */}
-        <div className="text-center mt-12 pt-8 border-t border-gray-200">
+        <div className="text-center mt-12 pt-8 border-t border-gray-200 flex flex-col gap-3">
           <p className="text-sm text-gray-500">
             SQL Practice - Learn SQL offline on any device
           </p>
+          <Link href="https://github.com/ajayda24">
+            <p className="text-sm text-gray-500">
+              Created with ❤️ by Ajay Daniel
+            </p>
+          </Link>
         </div>
       </div>
     </div>
